@@ -51,8 +51,9 @@ namespace MvcProjesi.Controllers
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
-        }
 
+        }
+            
         [HttpGet]
         public ActionResult EditHeading(int id)
         {
@@ -80,6 +81,15 @@ namespace MvcProjesi.Controllers
             headingvalues.HeadingStatus = false;
             hm.HeadingDelete(headingvalues);
             return RedirectToAction("Index");
+        }
+        public ActionResult HeadingReport()
+        {
+            var headingvalues = hm.GetList();
+            return View(headingvalues);
+        }
+        public ActionResult SweetAlert()
+        {
+            return View();
         }
 
 

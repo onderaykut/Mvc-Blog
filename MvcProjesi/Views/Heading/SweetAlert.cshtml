@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "SweetAlert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+ <button class="btn btn-primary" id="world">Hello World!</button>
+<br />
+<br />
+<button class="btn btn-success" id="alert">Başlıklara Git</button>
+<br />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+    $('#world').click(function () {
+        swal("Hello world!");
+    });
+</script>
+<script>
+    $('#alert').click(function () {
+        swal({
+            title: "Buton!",
+            text: "Butona Tıklandı!",
+            icon: "success",
+            timer: 2000 
+        });
+
+        setTimeout(function () {
+            window.location.href = "/Heading/Index";
+        }, 2000); 
+    });
+</script>

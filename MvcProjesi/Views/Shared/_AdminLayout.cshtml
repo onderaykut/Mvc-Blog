@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>AdminLTE 3 | Dashboard 3</title>
+    <title>Mvc Blog Site</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
@@ -61,28 +61,39 @@ to get the desired effect
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                             with font-awesome or any other icon font library -->
-                        <li class="nav-item has-treeview ">
-                            <a href="/AdminCategory/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Kategoriler
-                                </p>
-                            </a>
-
-                        </li>
+    with font-awesome or any other icon font library -->
+                        @if (User.IsInRole("B"))
+                        {
+                            <li class="nav-item has-treeview ">
+                                <a href="/AdminCategory/Index/" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Kategoriler
+                                    </p>
+                                </a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a href="/Heading/Index" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                                <i class="nav-icon fa fa-bars"></i>
                                 <p>
                                     Başlıklar
 
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/Content/GetAllContents" class="nav-link">
+                                <i class="nav-icon fas fa-book-reader"></i>
+                                <p>
+                                    Yazılar
+
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item has-treeview">
                             <a href="/Writer/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
+                                <i class="nav-icon fa fa-user"></i>
                                 <p>
                                     Yazarlar
 
@@ -99,7 +110,7 @@ to get the desired effect
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <a href="/Chart/Index/" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Grafik 1</p>
                                     </a>
@@ -127,31 +138,40 @@ to get the desired effect
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
+                            <a href="/Heading/SweetAlert" class="nav-link">
+                                <i class="nav-icon fa fa-bell"></i>
+                                <p>
+                                    Sweet Alert
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Heading/HeadingReport" class="nav-link">
+                                <i class="nav-icon fa fa-envelope"></i>
+                                <p>
+                                    Raporlar
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
                             <a href="/Contact/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
+                                <i class="nav-icon fa fa-comments"></i>
                                 <p>
                                     İletişim & Mesajlar
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-table"></i>
-                                <p>
-                                    Yazılar
-                                </p>
-                            </a>
-                        </li>
+
                         <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
-                                <i class="nav-icon fas fa-calendar-alt"></i>
+                            <a href="/Authorization/Index/" class="nav-link">
+                                <i class="nav-icon fa fa-sitemap"></i>
                                 <p>
                                     Yetkilendirmeler
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="/Gallery/Index/" class="nav-link">
                                 <i class="nav-icon far fa-image"></i>
                                 <p>
                                     Galeri
@@ -160,23 +180,23 @@ to get the desired effect
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="/ErrorPage/Page404/" class="nav-link">
-                                <i class="nav-icon far fa-envelope"></i>
+                                <i class="nav-icon fa fa-exclamation-triangle"></i>
                                 <p>
                                     Hata Sayfaları
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                            <a href="/Home/HomePage" class="nav-link">
+                                <i class="nav-icon fa fa-book"></i>
                                 <p>
                                     Siteye Git
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-plus-square"></i>
+                            <a href="/Login/LogOut" class="nav-link">
+                                <i class="nav-icon fa fa-times-circle"></i>
                                 <p>
                                     Çıkış Yap
                                 </p>

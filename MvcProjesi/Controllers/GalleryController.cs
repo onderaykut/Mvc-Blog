@@ -13,6 +13,7 @@ namespace MvcProjesi.Controllers
         // GET: Gallery
         ImageFileManager ifm = new ImageFileManager(new EfImageFileDal());
 
+       
         public ActionResult Index()
         {
             var files = ifm.GetList();

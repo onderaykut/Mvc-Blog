@@ -20,17 +20,18 @@ namespace MvcProjesi.Controllers
 
 
 
-        //[Authorize]
-        [Authorize(Roles = "A")]
-        public ActionResult Inbox()
+
+        //[Authorize(Roles = "A")]
+        [Authorize]
+        public ActionResult Inbox(string p)
         {
-            var messagelistIn = mm.GetListInbox();
+            var messagelistIn = mm.GetListInbox(p);
             return View(messagelistIn);
         }
 
-        public ActionResult Sendbox()
+        public ActionResult Sendbox(string p)
         {
-            var messagelistsend = mm.GetListSendbox();
+            var messagelistsend = mm.GetListSendbox(p);
             return View(messagelistsend);
         }
 

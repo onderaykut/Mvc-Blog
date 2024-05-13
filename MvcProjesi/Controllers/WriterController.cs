@@ -17,6 +17,7 @@ namespace MvcProjesi.Controllers
         // GET: Writer
         WriterManager wm = new WriterManager(new EfWriterDal());
         WriterValidator writerValidator = new WriterValidator();
+
         public ActionResult Index()
         {
             var writerValues = wm.GetList();

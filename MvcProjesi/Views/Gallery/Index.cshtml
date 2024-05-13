@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Gallery</title>
+    <title>Galeri</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -27,25 +27,17 @@
 </head>
 <body class="hold-transition sidebar-mini">
 
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Galeri</h1>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
+
     <!-- Main content -->
     <section class="content">
+        <br />
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <div class="card card-primary">
                         <div class="card-header">
                             <div class="card-title">
-                                Ekko Lightbox
+                                Galeri
                             </div>
                         </div>
                         <div class="card-body">
@@ -55,7 +47,7 @@
 
                                     <div class="col-sm-2">
                                         <a href="@item.ImagePath" data-toggle="lightbox" data-title="@item.ImageName" data-gallery="gallery">
-                                            <img src="@item.ImagePath" style="width:250px;height:150px" class ="img-fluid mb-2" alt="white sample" />
+                                            <img src="@item.ImagePath" style="width:250px;height:150px" class="img-fluid mb-2" alt="white sample" />
                                         </a>
                                     </div>
                                 }
@@ -67,7 +59,7 @@
         </div><!-- /.container-fluid -->
     </section>
 
-    <!-- jQuery -->
+      <!-- jQuery -->
     <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="~/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
